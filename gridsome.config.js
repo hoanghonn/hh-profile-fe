@@ -4,7 +4,22 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const tailwindcss = require("tailwindcss");
+
 module.exports = {
   siteName: "Hoang Nguyen",
+  likes: {
+    language: "JavaScript",
+    frameworks: ["Vue", "Gridsome", "Tailwind"],
+  },
+
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [tailwindcss],
+      },
+    },
+  },
+
   plugins: [],
 };
